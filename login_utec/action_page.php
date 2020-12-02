@@ -13,17 +13,7 @@
     
         
          $consulta = $db->query("SELECT * FROM TBLALUMNO  WHERE EMAIL_A = '$email' AND CONTRASENA = '$password' LIMIT 1;");
-       
-       
-
-        if($consulta != $email || $consulta != $password){ 
-            header("location: justificantes.php");
-            echo ("el correo o contraseña es incorrecto");      
-        } 
-
-        if($email & $password = $consulta->fetchArray()) {
-           
-        while ($row = $consulta->fetchArray()) {
+         while ($row = $consulta->fetchArray()) {
         $matricula = $row[ 'PKMATRICULA_A' ];
         $_SESSION['PKMATRICULA_A']=$matricula;
         $alumno = $row['NOMBRE_A'];
@@ -46,13 +36,18 @@
         $_SESSION['USUARIO']=$usuario;
         $grupo = $row['KGRUPO'];
         $_SESSION['KGRUPO']=$grupo;
-        }
-        
-        
+        }   
+
+        if($consulta != $email || $consulta != $password){ 
+            header("location: justificantes.php");
+            echo ("el correo o contraseña es incorrecto");      
+        } 
+
+        if($email & $password = $consulta->fetchArray()) {
+                   
         header("location: solicitud.php");
          }else {
             header("location: ../error_sesion.php");
         }
     
-     
      ?>

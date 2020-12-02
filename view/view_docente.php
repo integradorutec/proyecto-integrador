@@ -29,8 +29,7 @@
         $email = $row['EMAIL_P'];
         $telefono = $row['TELEFONO_P'];
         $usuario = $row['USUARIO'];
-        $coordi = $row["FKCOORDINADOR"];
-        $contra = $row['CONTRASENA'];
+        $coordi = $row["FKCOORDINADOR"];    
     }
 
     $form = "<div class='form-group'>
@@ -68,14 +67,10 @@
         <div class='form-group'>
             <label for='FKCOORDINADOR'>COORDINADOR</label>
             <input type='text' class='form-control' id='FKCOORDINADOR' name='FKCOORDINADOR' aria-describedby='cordi' value='$coordi'>
-        </div>
-        <div class='form-group'>
-            <label for='contraseña'>CONTRASEÑA</label>
-            <input type='text' class='form-control' id='CONTRASENA' name='CONTRASENA' aria-describedby='contra' value='$contra'>
         </div>";
 
     print($form);
 ?>
- <a href="/general/registro_alum.php" aling=center>Regresar</a>
+ <a href="/general/registro_docente.php" aling=center>Regresar</a>
 </body>
 </html>

@@ -30,7 +30,6 @@
         $telefono = $row['TEFEFONO_C'];
         $carrera =$row['KCARRERA_C'];
         $usuario = $row['USUARIO'];
-        $contra = $row['CONTRASENA'];
     }
 
     $form = "<div class='form-group'>
@@ -68,10 +67,6 @@
         <div class='form-group'>
             <label for='carrera'>CARRERA</label>
             <input type='text' class='form-control' id='KCARRERA_C' name='KCARRERA_C' aria-describedby='cordi' value='$carrera'>
-        </div>
-        <div class='form-group'>
-            <label for='contraseña'>CONTRASEÑA</label>
-            <input type='text' class='form-control' id='CONTRASENA' name='CONTRASENA' aria-describedby='contra' value='$contra'>
         </div>";
 
     print($form);

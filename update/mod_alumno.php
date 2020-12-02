@@ -8,7 +8,6 @@
     $telefono = $_GET['TELEFONO_A'];
     $carrera = $_GET['KCARRERA'];
     $coordi = $_GET['KCOORDINADOR'];
-    $contraseña = $_GET['CONTRASENA'];
     $usuario = $_GET['USUARIO'];
     $grupo = $_GET['GRUPO'];
 

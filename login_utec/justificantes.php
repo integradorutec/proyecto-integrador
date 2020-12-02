@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                   <label for="user"></label>
-                  <input type="email" class="form-control" id="email" placeholder="Correo electronico institucional" name="email" required>
+                  <input type="email" class="form-control" id="email" placeholder="Correo electronico institucional" name="email"  value="1719110305@UTECTULANCINGO.EDU.MX" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Por favor llenar este campo.</div>
                 </div>

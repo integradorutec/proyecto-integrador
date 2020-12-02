@@ -14,12 +14,12 @@
         <legend>Index</></legend>
         <a href="/login_utec/justificantes.php">Login</a><br>
         <a href="/login_utec/solicitud.php">Solicitud</a><br>
-        <a href="/eliminar/eliminar_alumnos.php">Eliminar alumnos</a> <br>
-        <a href="/delete/deletelist_alum.php">Eeeeliminar alumnos</a> <br>
-        <a href="/general/registro_just.php">Registro </a> <br>
-        <a href="/insertar/insertar_alumnos.php">Registro alumno </a> <br>
-        <a href="/insertar/insertar_coordinador.php">Registro coordinador</a> <br>
-        <a href="/insertar/insertar_docente.php">Registro profesor</a> <br>
+        <a href="/general/registro_alum.php">Registro de Alumnos</a> <br>
+        <a href="/general/registro_docente.php">Registro de Docente</a> <br>
+        <a href="/general/registro_just.php">Registro de Justificantes </a> <br>
+        <a href="/insertar/insertar_alumnos.php">Insertar alumno </a> <br>
+        <a href="/insertar/insertar_coordinador.php">Insertar coordinador</a> <br>
+        <a href="/insertar/insertar_docente.php">Insertar profesor</a> <br>
         
 
     </div>

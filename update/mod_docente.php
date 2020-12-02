@@ -7,7 +7,6 @@
     $email = $_GET['EMAIL_P'];
     $telefono = $_GET['TELEFONO_P'];
     $coordi = $_GET['FKCOORDINADOR'];
-    $contraseña = $_GET['CONTRASENA'];
     $usuario = $_GET['USUARIO'];
 
     $db= new SQLite3("../justificantes.db");

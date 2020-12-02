@@ -32,15 +32,14 @@
     $resultado = $db->query("SELECT * from TBLMOTIVOJUS");
 
 ?>
-<form action="insertar/db_insertar_justificante.php" method="POST">
+<form action="../insertar/db_insert_justificante.php" method="POST" enctype="multipart/form-data">
   <div class="form-group" aling= "center">
     <label for="motivo"><h2>Motivo de justificante<h2></label>
-    
   </div>
                 <label >Selecciona tu motivo</label>    
               <select class="form-control" id="motivo" name="motivo">
                   <option value="0" selected>Selecciona un motivo</option>
-            <?php 
+                    <?php 
                         
                         while ($row = $resultado->fetchArray())
                         {
@@ -50,7 +49,7 @@
                           
                         }
                     ?> 
-            ?>
+            
               </select>      
               <div class="form-group">      
               <label for="fechainicial" >Ingresa la fecha de inicio a justificar</label>   
