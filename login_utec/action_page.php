@@ -1,19 +1,39 @@
 <?php
-    
-
         session_start();
         $db = new SQLite3('../justificantes.db');
-        //include 'conexion.php';
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $usuario =$_POST['usuario'];
+        $usuario =$_POST['usuario'];      
         
-               
-       
-    
         
-         $consulta = $db->query("SELECT * FROM TBLALUMNO  WHERE EMAIL_A = '$email' AND CONTRASENA = '$password' LIMIT 1;");
-         while ($row = $consulta->fetchArray()) {
+        if($usuario=='profesor'){
+            $consulta = $db->query("SELECT * FROM TBLPROFESOR  WHERE  EMAIL_P = '$email' AND CONTRASENA = '$password' LIMIT 1;");
+            while ($row = $consulta->fetchArray()) {
+            $clave = $row[ 'CLAVEPROFESOR' ];
+            $profe = $row['NOMBRE_P'];
+            $apellidop = $row['APELLIDOP_P'];
+            $apellidom = $row['APELLIDOM_P'];
+            $genero = $row['KGENERO_P'];
+            $email = $row['EMAIL_P'];
+            $telefono = $row['TELEFONO_P'];
+            $usuario = $row['USUARIO'];
+            $coordi = $row["FKCOORDINADOR"];
+        }
+                if($consulta != $email || $consulta != $password){ 
+            header("location: justificantes.php");
+            echo ("el correo o contraseña es incorrecto");      
+        } 
+        if($email &  $password = $consulta->fetchArray()) {
+            header("location: ../view/view_docente.php");
+        } else {
+            header("location: ../error_sesion.php");
+        }      
+        }
+
+
+        if ($usuario=='alumno')    {
+        $consulta = $db->query("SELECT * FROM TBLALUMNO  WHERE EMAIL_A = '$email' AND CONTRASENA = '$password' LIMIT 1;");
+        while ($row = $consulta->fetchArray()) {
         $matricula = $row[ 'PKMATRICULA_A' ];
         $_SESSION['PKMATRICULA_A']=$matricula;
         $alumno = $row['NOMBRE_A'];
@@ -48,6 +68,6 @@
         header("location: solicitud.php");
          }else {
             header("location: ../error_sesion.php");
-        }
-    
-     ?>
+        }}
+
+        ?>

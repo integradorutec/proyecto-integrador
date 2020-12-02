@@ -20,6 +20,7 @@
         <a href="/insertar/insertar_alumnos.php">Insertar alumno </a> <br>
         <a href="/insertar/insertar_coordinador.php">Insertar coordinador</a> <br>
         <a href="/insertar/insertar_docente.php">Insertar profesor</a> <br>
+        <a href="/general/registro_docente.php"> profesor</a> <br>
         
 
     </div>

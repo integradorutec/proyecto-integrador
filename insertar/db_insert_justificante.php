@@ -11,7 +11,7 @@
     $nombre=$_FILES['archivo']['name'];
 $guardado=$_FILES['archivo']['tmp_name'];
     $descripcion ='Ayudemeee';
-
+    $ligaimagen='../sql/archivos/'+$nombre;
 
 
 
@@ -43,7 +43,7 @@ if(!file_exists('archivo')){
      $db->exec("INSERT INTO TBLJUSTIFICANTE (KSOLICITANTE,KCOODINADOR,FECHASOLICITUD,KMOTIVO,INICIOJ,FINALJ,KCOD_JUSTIFRES)values 
      ($matricula, '$coordinador', '$fechaactual', '$motivo', '$fechainicial','$fechafinal', 'E');");
     
-    header("Location: ../general/registro_just.php");
+    header("Location: ../general/registrojustificanteal.php");
 
 }
     
