@@ -8,32 +8,45 @@
     $fechaactual=  date("j, n, Y");
     $fechainicial= $_POST['fechainicial'];
     $fechafinal = $_POST['fechafinal'];
-    $archivo = $_POST['archivo'];
-    $descripcion=$_POST['archivo'];
     
-    $idProductos = isset($_POST['idProductos']) ? $_POST['idProductos'] : '';
- $productoS= $_POST['producto'];
-    
-    include 'conexion.php';  
-    $db = new SQLite3("../tienda.db");
-    
+    $nombre=$_FILES['archivo']['name'];
+    $guardado=$_FILES['archivo']['tmp_name'];
 
-    $productos = explode(";",$idProductos);
-    foreach ($productos as $producto) {
-    $productoYCantidad = explode(":",$producto);
-    if(!isset($productoYCantidad[0]) || !isset($productoYCantidad[1])){
+if(!file_exists('archivos')){
+	mkdir('archivos',0777,true);
+	if(file_exists('archivos')){
+		if(move_uploaded_file($guardado, 'sql/archivos/'.$nombre)){
+			echo "Archivo guardado con exito";
+		}else{
+			echo "Archivo no se pudo guardar";
+		}
+	}
+}else{
+	if(move_uploaded_file($guardado, 'archivos/'.$nombre)){
+		echo "Archivo guardado con exito";
+	}else{
+		echo "Archivo no se pudo guardar";
+	}
+}
+
+
+    include 'conexion.php'; 
+    $db = new SQLite3("../justificantes.db");
+    
+    
+    $motivos = explode(":",$motivo);
+    if(!isset($motivos[1])){
         continue;
-    }
      $db->exec("INSERT INTO TBLJUSTIFICANTE (KSOLICITANTE,KCOODINADOR,FECHASOLICITUD,KMOTIVO,INICIOJ,FINALJ,DESCRIPCION,KCOD_JUSTIFRES)
-    values ($matricula, $coordinador, $fechaactual, $motivo, $fechainicial,$fechafinal, $descripcion, 'E');");
+    values ($matricula, $coordinador, $fechaactual, $motivos[1], $fechainicial,$fechafinal, $descripcion, 'E');");
     
-    $db->exec("INSERT INTO ticket (cantidad_producto,producto,total_producto) VALUES ('$productoYCantidad[1]', '$productoYCantidad[0]', '$existencias');");
-   
-
-    
-
-   
     header("Location: ../general/registro_alum.php");
 
 }
+    
+    
+
+
+
+    
 ?>

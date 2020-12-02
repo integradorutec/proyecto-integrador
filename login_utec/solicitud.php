@@ -32,7 +32,7 @@
     $resultado = $db->query("SELECT * from TBLMOTIVOJUS");
 
 ?>
-<form action="/insertar/de_insertar_justificante.php" method="POST">
+<form action="insertar/db_insertar_justificante.php" method="POST">
   <div class="form-group" aling= "center">
     <label for="motivo"><h2>Motivo de justificante<h2></label>
     
