@@ -1,0 +1,68 @@
+.stiloslabel{
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
+  width: 100%;
+  text-align: center;
+  background-color: #1c1c44;
+}
+.stiloslabel1{
+  color: whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
+  width: 100%;
+  text-align: center;
+  background-color: #1c1c44;
+  
+}
+
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+
+.formulario{
+  border: 1px dotted #999;
+  border-radius: 0;
+  -webkit-appearance: none
+}
+
+.body_login{
+background: url(/images/fondo1.png/) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.body_solicitud{
+background: url(/images/fondosoli.jpg/) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.body_insertar{
+    background: url(/images/fondosoli.jpg/) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #006505;
+    background-color: #82b085;
+    border-radius: 15px;
+    border: 3px double #006505;
+  }
+
+

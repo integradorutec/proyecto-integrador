@@ -1,0 +1,41 @@
+.stiloslabel{
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
+  width: 100%;
+  text-align: center;
+  background-color: #1c1c44;
+}
+.stiloslabel1{
+  color: whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
+  width: 100%;
+  text-align: center;
+  background-color: #1c1c44;
+  
+}
+
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+
+.formulario{
+  border: 1px dotted #999;
+  border-radius: 0;
+  -webkit-appearance: none
+}
+
+body{
+background: url(/login_utec/fondo1.png/) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.cssfondo{
+  color: aqua;
+  background-color: #1c1c44;
+}
